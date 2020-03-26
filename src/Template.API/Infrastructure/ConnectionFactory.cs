@@ -12,7 +12,7 @@ namespace Template.API.Infrastructure
     {
         private readonly TemplateSetting _setting;
 
-        public ConnectionFactory(IOptions<TemplateSetting> setting)
+        public ConnectionFactory(IOptionsSnapshot<TemplateSetting> setting)
         {
             _setting = setting.Value;
         }

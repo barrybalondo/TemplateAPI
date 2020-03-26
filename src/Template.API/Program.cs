@@ -73,7 +73,8 @@ namespace Template.API
                     reloadOnChange: true)
                 .AddJsonFile(
                     $"appsettings.{Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") ?? "Prd"}.json",
-                    optional: true)
+                    optional: true,
+                    reloadOnChange: true)
                 .AddEnvironmentVariables();
 
             return builder.Build();
